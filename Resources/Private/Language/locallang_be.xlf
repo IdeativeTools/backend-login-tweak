@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:id_be_login/Resources/Private/Language/locallang_be.xlf" date="2026-04-19T16:17:33Z" product-name="id_be_login">
+		<header/>
+		<body>
+			<trans-unit id="module.about.companyAddress" resname="module.about.companyAddress">
+				<source>Route des Jeunes
+1227 Carouge
+Switzerland</source>
+			</trans-unit>
+			<trans-unit id="module.about.companyHeading" resname="module.about.companyHeading">
+				<source>Publisher</source>
+			</trans-unit>
+			<trans-unit id="module.about.companyName" resname="module.about.companyName">
+				<source>Ideative SA</source>
+			</trans-unit>
+			<trans-unit id="module.about.emailLabel" resname="module.about.emailLabel">
+				<source>Email: </source>
+			</trans-unit>
+			<trans-unit id="module.about.extensionBody" resname="module.about.extensionBody">
+				<source>This extension (id_be_login) adds a TYPO3 backend module to customize the administrator login screen: background image (local path, FAL folder, or remote service), logo and alt text, colors for the login card and sign-in button, footnote text, and login box placement, opacity, and corner radius. Settings are stored in the extension configuration and applied on the login page together with compatibility fallbacks to the core backend extension where values are left empty.</source>
+			</trans-unit>
+			<trans-unit id="module.about.extensionHeading" resname="module.about.extensionHeading">
+				<source>About this extension</source>
+			</trans-unit>
+			<trans-unit id="module.about.phoneLabel" resname="module.about.phoneLabel">
+				<source>Phone: </source>
+			</trans-unit>
+			<trans-unit id="module.flash.invalidToken" resname="module.flash.invalidToken">
+				<source>The form token was invalid. Please try again.</source>
+			</trans-unit>
+			<trans-unit id="module.flash.saveFailed" resname="module.flash.saveFailed">
+				<source>Settings could not be written to LocalConfiguration. Check file permissions.</source>
+			</trans-unit>
+			<trans-unit id="module.flash.saved" resname="module.flash.saved">
+				<source>Login appearance settings have been saved.</source>
+			</trans-unit>
+			<trans-unit id="module.tab.about" resname="module.tab.about">
+				<source>About</source>
+			</trans-unit>
+			<trans-unit id="module.tab.colors" resname="module.tab.colors">
+				<source>Colors</source>
+			</trans-unit>
+			<trans-unit id="module.tab.footnote" resname="module.tab.footnote">
+				<source>Footnote</source>
+			</trans-unit>
+			<trans-unit id="module.tab.images" resname="module.tab.images">
+				<source>Background image</source>
+			</trans-unit>
+			<trans-unit id="module.tab.loginBox" resname="module.tab.loginBox">
+				<source>Login box</source>
+			</trans-unit>
+			<trans-unit id="module.tab.logo" resname="module.tab.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="module.title" resname="module.title">
+				<source>Login appearance</source>
+			</trans-unit>
+			<trans-unit id="settings.intro" resname="settings.intro">
+				<source>These settings apply to the TYPO3 backend login page. Use public resource paths such as EXT:your_extension/Resources/Public/... (same format as the core backend extension configuration). For the login background you can use a single local file, a random JPG/JPEG/PNG/WebP from a FAL folder (direct children of the selected folder), or a remote random image (third-party services; each page load may request a new image). Login logo, logo alt, and footnote show values from the core backend extension settings when this extension has not stored its own value yet.</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundFalFolder" resname="settings.loginBackgroundFalFolder">
+				<source>Background image folder</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundFalFolder.browse" resname="settings.loginBackgroundFalFolder.browse">
+				<source>Browse…</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundFalFolder.hint" resname="settings.loginBackgroundFalFolder.hint">
+				<source>Select a folder from your file mounts. Each login page load uses one random image with extension JPG, JPEG, PNG, or WebP from the folder’s direct contents (not subfolders). If none are found, the bundled road.webp fallback is used. You can also paste a combined identifier (e.g. 1:/path).</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundImage" resname="settings.loginBackgroundImage">
+				<source>Background image</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundImage.hint" resname="settings.loginBackgroundImage.hint">
+				<source>Path to an image (JPG, PNG, WebP, …) inside an extension or another resolvable public resource identifier. Empty here uses the backend extension’s login background setting if configured.</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundRemoteProvider" resname="settings.loginBackgroundRemoteProvider">
+				<source>Random image service</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundRemoteProvider.danielpetrica" resname="settings.loginBackgroundRemoteProvider.danielpetrica">
+				<source>random.danielpetrica.com API</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundRemoteProvider.hint" resname="settings.loginBackgroundRemoteProvider.hint">
+				<source>Images are loaded directly in the browser from the provider you choose. Ensure your environment and Content-Security-Policy allow those hosts if the background does not appear.</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundRemoteProvider.picsum" resname="settings.loginBackgroundRemoteProvider.picsum">
+				<source>Lorem Picsum (picsum.photos)</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundSource" resname="settings.loginBackgroundSource">
+				<source>Background image source</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundSource.falFolder" resname="settings.loginBackgroundSource.falFolder">
+				<source>FAL folder (random image)</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundSource.hint" resname="settings.loginBackgroundSource.hint">
+				<source>Choose a source to reload this form and show the matching fields. Local uses a single file path (TYPO3 public resource). FAL folder picks a random raster image from that folder on each login visit. Remote loads a random image from the selected service on each visit. Save applies your choice to configuration.</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundSource.local" resname="settings.loginBackgroundSource.local">
+				<source>Local file / resource path</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBackgroundSource.remote" resname="settings.loginBackgroundSource.remote">
+				<source>Remote random image</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxBackgroundColor" resname="settings.loginBoxBackgroundColor">
+				<source>Login box background</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxBackgroundColor.hint" resname="settings.loginBoxBackgroundColor.hint">
+				<source>Fill color behind the login card. Leave empty to use white in light mode and black in dark mode (matching the login page color scheme). A hex color here overrides that for both modes.</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxBorderRadius" resname="settings.loginBoxBorderRadius">
+				<source>Login box corner radius (px)</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxBorderRadius.hint" resname="settings.loginBoxBorderRadius.hint">
+				<source>Leave empty to use the default TYPO3 corner radius. Use 0 for square corners, or 1–64 for a custom radius in pixels.</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxOpacity" resname="settings.loginBoxOpacity">
+				<source>Login box opacity</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxOpacity.hint" resname="settings.loginBoxOpacity.hint">
+				<source>Opacity of the login panel background in 5% steps from 0% (fully transparent blend) to 100% (opaque). Only the card surface is blended; text and controls stay solid. Default is 55%.</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition" resname="settings.loginBoxPosition">
+				<source>Login box position</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.bottomCenter" resname="settings.loginBoxPosition.bottomCenter">
+				<source>Bottom center</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.bottomLeft" resname="settings.loginBoxPosition.bottomLeft">
+				<source>Bottom left</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.bottomRight" resname="settings.loginBoxPosition.bottomRight">
+				<source>Bottom right</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.center" resname="settings.loginBoxPosition.center">
+				<source>Centered (default)</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.hint" resname="settings.loginBoxPosition.hint">
+				<source>Placement of the login panel on the screen.</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.listLabel" resname="settings.loginBoxPosition.listLabel">
+				<source>Or choose from the list</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.middleLeft" resname="settings.loginBoxPosition.middleLeft">
+				<source>Middle left</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.middleRight" resname="settings.loginBoxPosition.middleRight">
+				<source>Middle right</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.topCenter" resname="settings.loginBoxPosition.topCenter">
+				<source>Top center</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.topLeft" resname="settings.loginBoxPosition.topLeft">
+				<source>Top left</source>
+			</trans-unit>
+			<trans-unit id="settings.loginBoxPosition.topRight" resname="settings.loginBoxPosition.topRight">
+				<source>Top right</source>
+			</trans-unit>
+			<trans-unit id="settings.loginButtonColor" resname="settings.loginButtonColor">
+				<source>Sign-in button color</source>
+			</trans-unit>
+			<trans-unit id="settings.loginFootnote" resname="settings.loginFootnote">
+				<source>Login screen footnote</source>
+			</trans-unit>
+			<trans-unit id="settings.loginFootnote.hint" resname="settings.loginFootnote.hint">
+				<source>Short text shown below the login card (TYPO3 copyright area). HTML is stripped; line breaks are preserved. Leave empty to use the backend extension footnote setting if configured. A non-empty value here overrides it on the login page.</source>
+			</trans-unit>
+			<trans-unit id="settings.loginLogo" resname="settings.loginLogo">
+				<source>Login logo</source>
+			</trans-unit>
+			<trans-unit id="settings.loginLogo.hint" resname="settings.loginLogo.hint">
+				<source>SVG or raster image path. SVG is inlined and sanitized like the core login logo handling. Empty here uses the backend extension’s login logo setting if configured.</source>
+			</trans-unit>
+			<trans-unit id="settings.loginLogoAlt" resname="settings.loginLogoAlt">
+				<source>Logo alternative text</source>
+			</trans-unit>
+			<trans-unit id="settings.previewHint" resname="settings.previewHint">
+				<source>Test in private browsing</source>
+			</trans-unit>
+			<trans-unit id="settings.previewHint.title" resname="settings.previewHint.title">
+				<source>Right-click this link and open it in a new private or incognito window (exact menu wording depends on your browser). You will see the backend login page right away with your saved appearance, without using this logged-in session.</source>
+			</trans-unit>
+			<trans-unit id="settings.save" resname="settings.save">
+				<source>Save</source>
+			</trans-unit>
+			<trans-unit id="settings.section.visual" resname="settings.section.visual">
+				<source>Backend login screen</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

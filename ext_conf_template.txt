@@ -1,0 +1,35 @@
+# cat=Login appearance; type=options[LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundSource.local=local, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundSource.falFolder=fal_folder, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundSource.remote=remote]; label=Background source: whether the login background uses a local file path, a random image from a FAL folder, or a remote random image service. Stored values match the backend login appearance module.
+loginBackgroundSource = remote
+
+# cat=Login appearance; type=options[LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundRemoteProvider.picsum=picsum, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundRemoteProvider.danielpetrica=danielpetrica]; label=Remote background provider: which third-party service is used when the background source is remote. Stored values match the backend login appearance module.
+loginBackgroundRemoteProvider = picsum
+
+# cat=Login appearance; type=string; label=Background image: path to one image (EXT or public resource) when the source is local. Synced with the backend extension login background option.
+loginBackgroundImage = EXT:id_be_login/Resources/Public/Pictures/road.webp
+
+# cat=Login appearance; type=string; label=Background FAL folder: combined folder identifier (e.g. 1:/folder) when the source is fal_folder. Random JPG, JPEG, PNG, or WebP from direct files in that folder only.
+loginBackgroundFalFolder = 1:/Demo_Content/
+
+# cat=Login appearance; type=string; label=Login logo: path to the logo file (SVG or raster, EXT or public resource). Synced with the backend extension login logo option.
+loginLogo = EXT:id_be_login/Resources/Public/Pictures/Ideative-logo.svg
+
+# cat=Login appearance; type=string; label=Login logo alt text: accessible description shown for the logo.
+loginLogoAlt = Idéative
+
+# cat=Login appearance; type=color; label=Login box background color: fill behind the login card. Leave empty for default white in light mode and black in dark mode.
+loginBoxBackgroundColor = #dfe9e5
+
+# cat=Login appearance; type=color; label=Sign-in button color: highlight color for the login button. Synced with the backend extension login highlight color option.
+loginButtonColor = #6be6b0
+
+# cat=Login appearance; type=options[LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.topLeft=top-left, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.topCenter=top-center, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.topRight=top-right, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.middleLeft=middle-left, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.center=center, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.middleRight=middle-right, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.bottomLeft=bottom-left, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.bottomCenter=bottom-center, LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.bottomRight=bottom-right]; label=Login box position: placement of the login panel on the screen. Stored values match the backend login appearance module (3×3 grid).
+loginBoxPosition = center
+
+# cat=Login appearance; type=string; label=Login box opacity: card surface opacity from 0 to 1 (e.g. 0.7 is 70%). The module uses 5% steps in the UI.
+loginBoxOpacity = 0.7
+
+# cat=Login appearance; type=string; label=Login box corner radius: radius in pixels. Leave empty for TYPO3 default, 0 for square corners, or 1–64 for a custom radius.
+loginBoxBorderRadius = 24
+
+# cat=Login appearance; type=user[Ideative\T3BeLogin\ExtensionConfiguration\LoginFootnoteExtConfField->render]; label=Login footnote: short plain text under the login card (HTML stripped). Multiline field matching the backend login appearance module.
+loginFootnote = Made with ♥ in Carouge by Idéative

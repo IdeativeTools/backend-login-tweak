@@ -1,0 +1,440 @@
+<!--suppress XmlDuplicatedId, CssUnusedSymbol -->
+<html
+    lang="en"
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:layout name="Module"/>
+
+<f:section name="Content">
+    <form action="" method="post" class="id-be-login-settings" id="{formElementId}">
+        <input type="hidden" name="idBeLoginFormToken" value="{formToken}"/>
+        <input type="hidden" name="idBeLoginTab" id="id-be-login-active-tab" value="{activeModuleTab}"/>
+
+        <h2>
+            <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.section.visual"/>
+        </h2>
+        <p class="mb-3 text-body-secondary">
+            <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.intro"/>
+        </p>
+
+        <ul class="nav nav-tabs flex-wrap mb-3" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button type="button"
+                    class="nav-link {f:if(condition: activeModuleTabIsImages, then: 'active')}"
+                    id="id-be-login-tab-images"
+                    data-bs-toggle="tab"
+                    data-bs-target="#id-be-login-pane-images"
+                    role="tab"
+                    aria-controls="id-be-login-pane-images"
+                    aria-selected="{f:if(condition: activeModuleTabIsImages, then: 'true', else: 'false')}"
+                    data-id-be-login-tab="images">
+                    <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.tab.images"/>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button"
+                    class="nav-link {f:if(condition: activeModuleTabIsLogo, then: 'active')}"
+                    id="id-be-login-tab-logo"
+                    data-bs-toggle="tab"
+                    data-bs-target="#id-be-login-pane-logo"
+                    role="tab"
+                    aria-controls="id-be-login-pane-logo"
+                    aria-selected="{f:if(condition: activeModuleTabIsLogo, then: 'true', else: 'false')}"
+                    data-id-be-login-tab="logo">
+                    <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.tab.logo"/>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button"
+                    class="nav-link {f:if(condition: activeModuleTabIsColors, then: 'active')}"
+                    id="id-be-login-tab-colors"
+                    data-bs-toggle="tab"
+                    data-bs-target="#id-be-login-pane-colors"
+                    role="tab"
+                    aria-controls="id-be-login-pane-colors"
+                    aria-selected="{f:if(condition: activeModuleTabIsColors, then: 'true', else: 'false')}"
+                    data-id-be-login-tab="colors">
+                    <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.tab.colors"/>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button"
+                    class="nav-link {f:if(condition: activeModuleTabIsLoginBox, then: 'active')}"
+                    id="id-be-login-tab-loginbox"
+                    data-bs-toggle="tab"
+                    data-bs-target="#id-be-login-pane-loginbox"
+                    role="tab"
+                    aria-controls="id-be-login-pane-loginbox"
+                    aria-selected="{f:if(condition: activeModuleTabIsLoginBox, then: 'true', else: 'false')}"
+                    data-id-be-login-tab="loginbox">
+                    <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.tab.loginBox"/>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button"
+                    class="nav-link {f:if(condition: activeModuleTabIsFootnote, then: 'active')}"
+                    id="id-be-login-tab-footnote"
+                    data-bs-toggle="tab"
+                    data-bs-target="#id-be-login-pane-footnote"
+                    role="tab"
+                    aria-controls="id-be-login-pane-footnote"
+                    aria-selected="{f:if(condition: activeModuleTabIsFootnote, then: 'true', else: 'false')}"
+                    data-id-be-login-tab="footnote">
+                    <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.tab.footnote"/>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button"
+                    class="nav-link {f:if(condition: activeModuleTabIsAbout, then: 'active')}"
+                    id="id-be-login-tab-about"
+                    data-bs-toggle="tab"
+                    data-bs-target="#id-be-login-pane-about"
+                    role="tab"
+                    aria-controls="id-be-login-pane-about"
+                    aria-selected="{f:if(condition: activeModuleTabIsAbout, then: 'true', else: 'false')}"
+                    data-id-be-login-tab="about">
+                    <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.tab.about"/>
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content mb-3">
+            <div class="tab-pane {f:if(condition: activeModuleTabIsImages, then: 'active')}"
+                id="id-be-login-pane-images"
+                role="tabpanel"
+                aria-labelledby="id-be-login-tab-images"
+                tabindex="0">
+                <div class="row mb-0">
+                    <div class="col-12">
+                        <span id="loginBackgroundSource-label" class="form-label d-block">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundSource"/>
+                        </span>
+                        <div class="btn-group mb-2" role="group" aria-labelledby="loginBackgroundSource-label">
+                            <a href="{loginBackgroundSwitchToLocalUri}"
+                                class="btn btn-sm btn-default {f:if(condition: loginBackgroundIsLocal, then: 'active')}">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundSource.local"/>
+                            </a>
+                            <a href="{loginBackgroundSwitchToFalFolderUri}"
+                                class="btn btn-sm btn-default {f:if(condition: loginBackgroundIsFalFolder, then: 'active')}">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundSource.falFolder"/>
+                            </a>
+                            <a href="{loginBackgroundSwitchToRemoteUri}"
+                                class="btn btn-sm btn-default {f:if(condition: loginBackgroundIsRemote, then: 'active')}">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundSource.remote"/>
+                            </a>
+                        </div>
+                        <input type="hidden" name="loginBackgroundSource" value="{loginBackgroundSourceDisplay}"/>
+                        <div class="form-text">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundSource.hint"/>
+                        </div>
+
+                        <div id="id-be-login-bg-local" class="mt-3{f:if(condition: loginBackgroundIsLocal, else: ' d-none', then: '')}">
+                            <label for="loginBackgroundImage" class="form-label">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundImage"/>
+                            </label>
+                            <input class="form-control" type="text" id="loginBackgroundImage" name="loginBackgroundImage"
+                                value="{settings.loginBackgroundImage}"
+                                placeholder="EXT:my_site/Resources/Public/Images/login-bg.jpg"/>
+                            <div class="form-text">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundImage.hint"/>
+                            </div>
+                        </div>
+
+                        <div id="id-be-login-bg-fal-folder" class="mt-3{f:if(condition: loginBackgroundIsFalFolder, else: ' d-none', then: '')}">
+                            <label for="loginBackgroundFalFolder" class="form-label">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundFalFolder"/>
+                            </label>
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="loginBackgroundFalFolder" name="loginBackgroundFalFolder"
+                                    value="{settings.loginBackgroundFalFolder}" placeholder="1:/login_backgrounds"/>
+                                <button type="button" class="btn btn-default" data-id-be-login-fal-folder-picker=""
+                                    data-input-id="loginBackgroundFalFolder">
+                                    <core:icon identifier="apps-filetree-folder" size="small"/>
+                                    <f:translate
+                                        key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundFalFolder.browse"/>
+                                </button>
+                            </div>
+                            <div class="form-text">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundFalFolder.hint"/>
+                            </div>
+                        </div>
+
+                        <div id="id-be-login-bg-remote" class="mt-3{f:if(condition: loginBackgroundIsRemote, else: ' d-none', then: '')}">
+                            <label for="loginBackgroundRemoteProvider" class="form-label">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundRemoteProvider"/>
+                            </label>
+                            <select class="form-select" id="loginBackgroundRemoteProvider" name="loginBackgroundRemoteProvider">
+                                <f:for each="{loginBackgroundRemoteProviderOptions}" as="opt">
+                                    <f:if condition="{settings.loginBackgroundRemoteProvider} == {opt.value}">
+                                        <f:then>
+                                            <f:variable name="loginBackgroundRemoteProviderSelected" value="selected"/>
+                                        </f:then>
+                                        <f:else>
+                                            <f:variable name="loginBackgroundRemoteProviderSelected" value=""/>
+                                        </f:else>
+                                    </f:if>
+                                    <option value="{opt.value}" {loginBackgroundRemoteProviderSelected}>{opt.label}</option>
+                                </f:for>
+                            </select>
+                            <div class="form-text">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBackgroundRemoteProvider.hint"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane {f:if(condition: activeModuleTabIsLogo, then: 'active')}"
+                id="id-be-login-pane-logo"
+                role="tabpanel"
+                aria-labelledby="id-be-login-tab-logo"
+                tabindex="0">
+                <div class="row mb-0">
+                    <div class="col-md-8 col-lg-6">
+                        <label for="loginLogo" class="form-label">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginLogo"/>
+                        </label>
+                        <input class="form-control" type="text" id="loginLogo" name="loginLogo"
+                            value="{settings.loginLogo}" placeholder="EXT:my_site/Resources/Public/Images/login-logo.svg"/>
+                        <div class="form-text">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginLogo.hint"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-0 mt-3">
+                    <div class="col-md-8 col-lg-6">
+                        <label for="loginLogoAlt" class="form-label">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginLogoAlt"/>
+                        </label>
+                        <input class="form-control" type="text" id="loginLogoAlt" name="loginLogoAlt"
+                            value="{settings.loginLogoAlt}"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane {f:if(condition: activeModuleTabIsColors, then: 'active')}"
+                id="id-be-login-pane-colors"
+                role="tabpanel"
+                aria-labelledby="id-be-login-tab-colors"
+                tabindex="0">
+                <div class="row mb-0">
+                    <div class="col-md-6 col-lg-4">
+                        <label for="loginBoxBackgroundColor" class="form-label">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxBackgroundColor"/>
+                        </label>
+                        <div class="form-control-wrap id-be-login-color-picker-wrap">
+                            <typo3-backend-color-picker>
+                                <input class="form-control" type="text" id="loginBoxBackgroundColor" name="loginBoxBackgroundColor"
+                                    value="{settings.loginBoxBackgroundColor}" placeholder="#ffffff" maxlength="7"
+                                    autocomplete="off" spellcheck="false" autocapitalize="off"
+                                    data-1p-ignore data-bwignore data-lpignore="true"
+                                    data-dashlane-ignore="true" data-keeper-ignore="true"/>
+                            </typo3-backend-color-picker>
+                        </div>
+                        <div class="form-text">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxBackgroundColor.hint"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-0 mt-3">
+                    <div class="col-md-6 col-lg-4">
+                        <label for="loginButtonColor" class="form-label">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginButtonColor"/>
+                        </label>
+                        <div class="form-control-wrap id-be-login-color-picker-wrap">
+                            <typo3-backend-color-picker>
+                                <input class="form-control" type="text" id="loginButtonColor" name="loginButtonColor"
+                                    value="{settings.loginButtonColor}" placeholder="#ff8700" maxlength="7"
+                                    autocomplete="off" spellcheck="false" autocapitalize="off"
+                                    data-1p-ignore data-bwignore data-lpignore="true"
+                                    data-dashlane-ignore="true" data-keeper-ignore="true"/>
+                            </typo3-backend-color-picker>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane {f:if(condition: activeModuleTabIsLoginBox, then: 'active')}"
+                id="id-be-login-pane-loginbox"
+                role="tabpanel"
+                aria-labelledby="id-be-login-tab-loginbox"
+                tabindex="0">
+                <div class="row mb-0">
+                    <div class="col-md-8 col-lg-6">
+                        <fieldset class="border-0 p-0 m-0" aria-describedby="loginBoxPosition-hint">
+                            <legend id="loginBoxPosition-legend" class="form-label col-form-label pt-0 mb-2">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition"/>
+                            </legend>
+                            <div class="d-flex flex-wrap align-items-start gap-3 mb-2">
+                                <div id="id-be-login-box-position-grid" class="d-grid gap-1 flex-shrink-0"
+                                    role="radiogroup" aria-labelledby="loginBoxPosition-legend">
+                                    <f:for each="{loginBoxPositionOptions}" as="opt">
+                                        <label class="id-be-login-pos-cell m-0 d-flex justify-content-center align-items-center rounded border border-secondary bg-body-tertiary">
+                                            <f:if condition="{settings.loginBoxPosition} == {opt.value}">
+                                                <f:then>
+                                                    <input type="radio" class="form-check-input m-0 flex-shrink-0"
+                                                        name="loginBoxPosition" id="id-be-login-pos-{opt.value}"
+                                                        value="{opt.value}" checked="checked" autocomplete="off"
+                                                        title="{opt.label}" aria-label="{opt.label}"/>
+                                                </f:then>
+                                                <f:else>
+                                                    <input type="radio" class="form-check-input m-0 flex-shrink-0"
+                                                        name="loginBoxPosition" id="id-be-login-pos-{opt.value}"
+                                                        value="{opt.value}" autocomplete="off"
+                                                        title="{opt.label}" aria-label="{opt.label}"/>
+                                                </f:else>
+                                            </f:if>
+                                        </label>
+                                    </f:for>
+                                </div>
+                                <div class="flex-grow-1 id-be-login-position-select-col">
+                                    <label for="loginBoxPositionList" class="form-label mb-1">
+                                        <f:translate
+                                            key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.listLabel"/>
+                                    </label>
+                                    <select id="loginBoxPositionList" class="form-select mb-0" autocomplete="off">
+                                        <f:for each="{loginBoxPositionOptions}" as="opt">
+                                            <f:if condition="{settings.loginBoxPosition} == {opt.value}">
+                                                <f:then>
+                                                    <option value="{opt.value}" selected="selected">{opt.label}</option>
+                                                </f:then>
+                                                <f:else>
+                                                    <option value="{opt.value}">{opt.label}</option>
+                                                </f:else>
+                                            </f:if>
+                                        </f:for>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-text mb-3" id="loginBoxPosition-hint">
+                                <f:translate
+                                    key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxPosition.hint"/>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="row mb-0 mt-3">
+                    <div class="col-md-6 col-lg-4">
+                        <label for="loginBoxOpacityPercent" class="form-label">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxOpacity"/>
+                        </label>
+                        <select class="form-select" id="loginBoxOpacityPercent" name="loginBoxOpacityPercent">
+                            <f:for each="{loginBoxOpacityPercentOptions}" as="opt">
+                                <f:if condition="{loginBoxOpacityPercent} == {opt.value}">
+                                    <f:then>
+                                        <f:variable name="loginBoxOpacityPercentSelected" value="selected"/>
+                                    </f:then>
+                                    <f:else>
+                                        <f:variable name="loginBoxOpacityPercentSelected" value=""/>
+                                    </f:else>
+                                </f:if>
+                                <option value="{opt.value}" {loginBoxOpacityPercentSelected}>{opt.label}</option>
+                            </f:for>
+                        </select>
+                        <div class="form-text">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxOpacity.hint"/>
+                        </div>
+
+                        <label for="loginBoxBorderRadius" class="form-label mt-3">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxBorderRadius"/>
+                        </label>
+                        <input class="form-control" type="number" id="loginBoxBorderRadius" name="loginBoxBorderRadius"
+                            value="{settings.loginBoxBorderRadius}" min="0" max="64" step="1"/>
+                        <div class="form-text">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginBoxBorderRadius.hint"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane {f:if(condition: activeModuleTabIsFootnote, then: 'active')}"
+                id="id-be-login-pane-footnote"
+                role="tabpanel"
+                aria-labelledby="id-be-login-tab-footnote"
+                tabindex="0">
+                <div class="row mb-0">
+                    <div class="col-12 col-lg-8">
+                        <label for="loginFootnote" class="form-label">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginFootnote"/>
+                        </label>
+                        <textarea class="form-control" id="loginFootnote" name="loginFootnote" rows="3"
+                            maxlength="200">{settings.loginFootnote}</textarea>
+                        <div class="form-text">
+                            <f:translate
+                                key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:settings.loginFootnote.hint"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane {f:if(condition: activeModuleTabIsAbout, then: 'active')}"
+                id="id-be-login-pane-about"
+                role="tabpanel"
+                aria-labelledby="id-be-login-tab-about"
+                tabindex="0">
+                <div class="row mb-0">
+                    <div class="col-12 col-lg-8">
+                        <h3 class="h5 mb-3">
+                            <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.about.extensionHeading"/>
+                        </h3>
+                        <p class="mb-4 text-body-secondary">
+                            <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.about.extensionBody"/>
+                        </p>
+                        <h3 class="h5 mb-3">
+                            <f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.about.companyHeading"/>
+                        </h3>
+                        <p class="mb-2">
+                            <img class="img-fluid d-block"
+                                src="{f:uri.resource(path: 'EXT:id_be_login/Resources/Public/Pictures/Ideative-logo.svg')}"
+                                alt="{f:translate(key: 'LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.about.companyName')}"
+                                width="280"
+                                height="100"
+                                loading="lazy"
+                                decoding="async"/>
+                        </p>
+                        <address class="mb-3 text-body-secondary fst-normal">
+                            <f:format.nl2br><f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.about.companyAddress"/></f:format.nl2br>
+                        </address>
+                        <p class="mb-1">
+                            <span class="text-body-secondary"><f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.about.phoneLabel"/></span>
+                            <a href="tel:+41225529800">+41 22 552 98 00</a>
+                        </p>
+                        <p class="mb-0">
+                            <span class="text-body-secondary"><f:translate key="LLL:EXT:id_be_login/Resources/Private/Language/locallang_be.xlf:module.about.emailLabel"/></span>
+                            <a href="mailto:hello@ideative.ch">hello@ideative.ch</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</f:section>
+
+</html>

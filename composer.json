@@ -1,0 +1,31 @@
+{
+	"name": "ideative/t3-be-login",
+	"version": "1.1.0",
+	"type": "typo3-cms-extension",
+	"description": "Backend module to customize the TYPO3 backend login appearance",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Régis Tedone",
+			"email": "typo3@ideative.ch",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": "^8.4",
+		"typo3/cms-backend": "^14.3",
+		"typo3/cms-core": "^14.3",
+		"typo3/cms-filelist": "^14.3",
+		"typo3/cms-fluid": "^14.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Ideative\\T3BeLogin\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "id_be_login"
+		}
+	}
+}

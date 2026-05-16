@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="fr" datatype="plaintext" original="EXT:id_be_login/Resources/Private/Language/Modules/login_appearance.xlf" date="2026-04-19T16:17:44Z" product-name="id_be_login">
+		<header/>
+		<body>
+			<trans-unit id="description" resname="description">
+				<source>Adjust background image, login panel opacity and corners, logo, and sign-in button color for the TYPO3 backend login page.</source>
+				<target>Réglez l’image de fond, l’opacité et les coins du panneau de connexion, le logo et la couleur du bouton de connexion pour la page de connexion du backend TYPO3.</target>
+			</trans-unit>
+			<trans-unit id="short_description" resname="short_description">
+				<source>Customize the backend login screen</source>
+				<target>Personnaliser l’écran de connexion du backend</target>
+			</trans-unit>
+			<trans-unit id="title" resname="title">
+				<source>Login appearance</source>
+				<target>Apparence du login</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
