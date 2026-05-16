@@ -6,7 +6,7 @@
 
 # id_be_login (Ideative TYPO3 Backend Login Tweak)
 
-**Current release:** `1.1.0` (see `composer.json`).
+**Current release:** `1.1.1` (see `composer.json`).
 TYPO3 backend extension that adds an **admin-only module** to customize the **administrator login screen** (appearance only; authentication is unchanged).
 
 **Extension key:** `id_be_login`

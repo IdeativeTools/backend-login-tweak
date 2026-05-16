@@ -1,6 +1,6 @@
 {
 	"name": "ideative/t3-be-login",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"type": "typo3-cms-extension",
 	"description": "Backend module to customize the TYPO3 backend login appearance",
 	"license": "GPL-2.0-or-later",
